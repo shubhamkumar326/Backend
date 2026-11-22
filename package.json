@@ -27,6 +27,7 @@
     "prettier": "^3.10.1"
   },
   "allowScripts": {
-    "bcrypt@6.0.0": true
+    "bcrypt@6.0.0": true,
+    "express@5.3.0": true
   }
 }

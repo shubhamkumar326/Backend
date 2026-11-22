@@ -1,5 +1,7 @@
 // require('dotenv').config()
 import dotenv from "dotenv";
+import app from "./app.js";
+
 
 
 // import mongoose from "mongoose";
@@ -13,8 +15,8 @@ dotenv.config({
 
 connectDB()
 .then(()=>{
-    app.listen(process.env.PORT || 4000,()=>{
-        console.log(`server is running on port ${process.env.PORT}`);
+    app.listen(process.env.PORT || 8000,()=>{
+        console.log(`server is running on port ${process.env.PORT || 8000}`);
     })
 })
 .catch((error)=>{

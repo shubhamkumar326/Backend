@@ -9,8 +9,8 @@ class Apierror extends Error {
         this.statusCode= statusCode;
         this.errors= errors;
         this.data =null;
-        this.stack = stack;
         this.success =false;
+        this.message = massage ;
 
         if(stack){
             this.stack = stack;
