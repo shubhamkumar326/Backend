@@ -1,7 +1,8 @@
 import {Router } from "express";
-import {registerUser} from "../controllers/user.controler.js"
+import {loginuser, registerUser} from "../controllers/user.controler.js"
 
 import { upload} from "../middlewares/multer.js"
+import { LogOut } from "lucide-react";
 
 const router =Router()
 
@@ -19,5 +20,11 @@ router.route("/register").post(
     ]),
     registerUser
 )
+
+router.route("/login").post(loginuser)
+
+router.route("/logot").post(veryfyJWT,logOutUser)
+
+
 
 export default router
